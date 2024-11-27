@@ -14,9 +14,7 @@ jobs:
         with:
           node-version: '20'
       - name: npm install, make test-coverage
-        run: |
-          npm install
-          make test-coverage
+        run: npm install
       - name: run tests
         run: npm test
       - name: Coveralls
