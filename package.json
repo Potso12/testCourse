@@ -8,7 +8,7 @@
     "verbose": true
   },
   "scripts": {
-    "test": "jest --coverage && coveralls < coverage/lcov.info"
+    "test": "jest --coverage"
   },
   "author": "",
   "license": "MIT",
