@@ -8,7 +8,9 @@
     "verbose": true
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest",
+    "coverage": "jest --coverage"
+
   },
   "author": "",
   "license": "MIT",

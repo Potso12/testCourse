@@ -25,9 +25,12 @@ describe('add', () => {
 
   it('should calculate the quotient correctly', () => {
     //kokeile muilla arvoilla tää ei musta toiminu esim 6 ja 3 luvuila 
-    //saattaa olla tarkotus että jokku nää ei toimi ja meidän pitäsi testeissa huomaa se 
-    const result = divide(3, 3)
-    expect(result).toBe(1);
+    //saattaa olla tarkotus että jokku nää ei toimi ja meidän pitäsi testeissa huomaa se
+    const result1 = divide(3, 3)
+    const result2 = divide(6, 3)
+
+    expect(result1).toBe(1);
+    expect(result2).toBe(2);
   });
 
   it('should convert first word into uppercase', () => {
@@ -52,21 +55,22 @@ describe('add', () => {
     expect(date2).toBe(false);
   });
 
-  /*it('should be able to calculate the the total cost of products', () => {
+  it('should be able to calculate the total cost of products', () => {
     const getSum = (total, num) => {
       return total + Math.round(num.price);
     }
-
-    const products = { name: "product 1", price: 2,
-      name: "product 1", price: 2,
-      name: "product 2", price: 10,
-      name: "product 3", price: 54,
-      name: "product 4", price: 3.5,
-    }
-
-    const result = reduce(products, getSum, 0)
-    expect(result).toBe(71.5);
-  });*/
+  
+    const products = [
+      { name: "product 1", price: 2 },
+      { name: "product 1", price: 2 },
+      { name: "product 2", price: 10 },
+      { name: "product 3", price: 54 },
+      { name: "product 4", price: 3 }
+    ];
+  
+    const result = reduce(products, getSum, 0);
+    expect(result).toBe(71);
+  });
 
   it('should filter products according to the function', () => {
     const products = [ { name: "product 1", price: 2 },
